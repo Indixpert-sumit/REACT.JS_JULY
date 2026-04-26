@@ -12,7 +12,7 @@ const RootLayout = () => {
             <button className="btn btn-primary text-start mb-3">Bootstrap Components</button>
           </div>
 
-          <ul className="nav flex-column gap-2">
+          <ul className="nav flex-column gap-2"> 
             <li className="nav-item">
               <NavLink 
                 to="/counter1" 
