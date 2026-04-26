@@ -13,7 +13,7 @@ export const DynamicAvatar = ({ img }) => {
                     width: "100px",
                     height: "100px",
                     objectFit: "cover"
-                }}
+                }} 
             />
         </div>
     );
