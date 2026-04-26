@@ -17,7 +17,7 @@ const Staticprofile_ = () => {
         </p>
       </div>
 
-    </div> 
+    </div>   
   );
 };
 

@@ -42,8 +42,8 @@ const App = () => {
                   />
                   
                   <DynamicProfileCard 
-                    name="gayitri" 
-                    role="Designer" 
+                    name="gayitri"   
+                    role="Designer"   
                     desc="I build beautiful UIs." 
                     img={lazy}
                   />

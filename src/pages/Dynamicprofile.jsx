@@ -15,5 +15,5 @@ const DynamicProfileCard = ({ name, role, desc, img }) => {
         </div>
     );
 };
- 
+  
 export default DynamicProfileCard;
