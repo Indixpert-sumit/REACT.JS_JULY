@@ -8,12 +8,12 @@ export const DynamicAvatar = ({ img }) => {
             <img
                 src={img}
                 alt="profile avatar"
-                className="rounded-circle border border-secondary shadow-sm"
+
                 style={{
                     width: "100px",
                     height: "100px",
-                    objectFit: "cover"
-                }}  
+                    border:"50px"
+                }}
             />
         </div>
     );

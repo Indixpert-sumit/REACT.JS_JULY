@@ -31,8 +31,7 @@ const ReducerCounter_ = () => {
 
   return (
     <>
-      <div>Current value of (useReducer) count = {count}</div>
-
+      <div>Current value of (useReducer) Count = {count}</div>
       <Button onClick={() => dispatch({ type: "increment", value: 1 })}>+1</Button>
       <Button onClick={() => dispatch({ type: "decrement", value: 1 })}>-1</Button>
       <Button onClick={() => dispatch({ type: "increment", value: 2 })}>+2</Button>

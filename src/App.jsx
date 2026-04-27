@@ -15,7 +15,7 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<RootLayout />}>
-        
+
 
           <Route path="counter1" element={<Counterwithusestate />} />
           <Route path="counter2" element={<ReducerCounter_ />} />
@@ -29,13 +29,13 @@ const App = () => {
                 name="John Deo"
                 role="Frontend Devloper"
                 desc="I enjoy building clean and responsive user interfaces using react!"
-                img={cloudImg}/>
+                img={cloudImg} />
 
               <DynamicProfileCard
                 name="Jennifer Martin"
                 role="Backend Development Student"
                 desc="I  enjoy building fast api using python and fastapi"
-                img={batmanImg}/>
+                img={batmanImg} />
 
               <DynamicProfileCard
                 name="Thomas smith"
@@ -43,7 +43,7 @@ const App = () => {
                 desc="I enjoy building clean and responsive user interfaces and api using react"
                 img={lazy} />
             </div>
-                            <footer className="text-bold">created for react practice</footer>
+            <footer className="text-bold">created for react practice</footer>
 
           </div>
           }
