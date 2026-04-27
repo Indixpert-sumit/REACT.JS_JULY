@@ -9,6 +9,7 @@ import DynamicProfileCard from "./pages/Dynamicprofile";
 import batmanImg from "./assests/batman.svg";
 import cloudImg from "./assests/cloud.svg";
 import lazy from "./assests/lazy.svg";
+import TodoApp from "./pages/Todolist";
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
           <Route path="counter1" element={<Counterwithusestate />} />
           <Route path="counter2" element={<ReducerCounter_ />} />
           <Route path="profile" element={<Staticprofile_ />} />
+          <Route path="todolist" element={<TodoApp />} />
 
           <Route path="dynamic" element={<div className="container mt-4">
             <h2 className="mb-4">Student Profiles Cards</h2>

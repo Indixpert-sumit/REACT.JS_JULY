@@ -33,9 +33,13 @@ const RootLayout = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to="/dynamic"
-              >
+              <NavLink to="/dynamic">
                 Dynamic Profile
+              </NavLink>
+            </li>
+             <li className="nav-item">
+              <NavLink to="/todolist">
+                Todo-list
               </NavLink>
             </li>
           </ul>
