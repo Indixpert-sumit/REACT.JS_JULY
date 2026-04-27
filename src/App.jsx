@@ -15,6 +15,8 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<RootLayout />}>
+        
+
           <Route path="counter1" element={<Counterwithusestate />} />
           <Route path="counter2" element={<ReducerCounter_ />} />
           <Route path="profile" element={<Staticprofile_ />} />

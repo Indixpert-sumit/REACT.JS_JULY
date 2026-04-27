@@ -41,7 +41,7 @@ const RootLayout = () => {
           </ul>
         </nav>
 
-        <main className="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-5 bg-light">
+        <main className="col-md-9 ">
           <div className=" min-vh-100">
             <Outlet />
           </div>
