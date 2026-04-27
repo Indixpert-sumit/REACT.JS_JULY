@@ -15,41 +15,37 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<RootLayout />}>
-          {/* 1. Standard Routes */}
           <Route path="counter1" element={<Counterwithusestate />} />
           <Route path="counter2" element={<ReducerCounter_ />} />
           <Route path="profile" element={<Staticprofile_ />} />
 
-          {/* 2. FIX: Move the <div> and Cards into the 'element' prop */}
-          <Route 
-            path="dynamic" 
-            element={
-              <div className="container mt-4">
-                <h2 className="mb-4">Team Profiles</h2>
-                <div className="d-flex gap-3 flex-wrap">
-                  <DynamicProfileCard 
-                    name="Sumit" 
-                    role="Frontend Dev" 
-                    desc="I love React!" 
-                    img={cloudImg} 
-                  />
+          <Route path="dynamic" element={<div className="container mt-4">
+            <h2 className="mb-4">Student Profiles Cards</h2>
+            <h4>Dyynamic React Component Assignment</h4>
+            <div className="d-flex gap-3 flex-wrap">
+              <DynamicProfileCard
+                name="John Deo"
+                role="Frontend Devloper"
+                desc="I enjoy building clean and responsive user interfaces using react!"
+                img={cloudImg}
+              />
 
-                  <DynamicProfileCard 
-                    name="Bruce" 
-                    role="Batman" 
-                    desc="I am the night." 
-                    img={batmanImg} 
-                  />
-                  
-                  <DynamicProfileCard 
-                    name="gayitri"   
-                    role="Designer"   
-                    desc="I build beautiful UIs." 
-                    img={lazy}
-                  />
-                </div>
-              </div>
-            } 
+              <DynamicProfileCard
+                name="Jennifer Martin"
+                role="Backend Development Student"
+                desc="I  enjoy building fast api using python and fastapi"
+                img={batmanImg}
+              />
+
+              <DynamicProfileCard
+                name="Thomas smith"
+                role="Full stack Development student"
+                desc="I enjoy building clean and responsive user interfaces and api using react"
+                img={lazy}
+              />
+            </div>
+          </div>
+          }
           />
         </Route>
       </Routes>
