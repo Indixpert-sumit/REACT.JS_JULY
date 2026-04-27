@@ -1,57 +1,68 @@
-import React, { useReducer, useState } from 'react';
-import { Button, InputGroup, FormControl, ListGroup } from 'react-bootstrap';
-
-const todoReducer = (state, action) => {
-  switch (action.type) {
-    case 'ADD_TASK':
-      return [...state, { id: Date.now(), text: action.payload }];
-    case 'DELETE_TASK':
-      return state.filter((task) => task.id !== action.payload);
-    default:
-      return state;
-  }
-};
+import { useState } from "react";
+import { Button } from "react-bootstrap";
 
 const Todolist = () => {
-  const [tasks, dispatch] = useReducer(todoReducer, []);
-  const [inputValue, setInputValue] = useState('');
+  const [input, setinputvalue] = useState('');
+  const [task, settask] = useState([]);
 
-  const handleAdd = () => {
-    if (inputValue.trim() === '') {
-      alert('Please enter something!');
+  const handleinputchange = (value) => {
+    setinputvalue(value);
+  };
+
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+
+    if (!input.trim()) return;
+    if (task.includes(input)) {
+      setinputvalue(""); // Clear input even if it's a duplicate
       return;
     }
-    dispatch({ type: 'ADD_TASK', payload: inputValue });
-    setInputValue(''); 
+
+    settask((prevTasks) => [...prevTasks, input]);
+    setinputvalue("");
+  };
+
+  const handleDeleteTask = (indexToDelete) => {
+    const updatedTasks = task.filter((_, index) => index !== indexToDelete);
+    settask(updatedTasks);
   };
 
   return (
-    <div >
-      <h1>To-Do-List</h1>
-      
-      <InputGroup className="mb-3">
-        <FormControl
-          placeholder="Enter something"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)} />
-        <Button variant="outline-secondary" onClick={handleAdd}>
-          Add Task
-        </Button>
-      </InputGroup>
+    <section className="todo_container">
+      <header>To-Do-List</header>
+      <section className="form">
+        <form onSubmit={handleFormSubmit}>
+          <div>
+            <input
+              type="text"
+              className="input"
+              value={input}
+              onChange={(event) => handleinputchange(event.target.value)}
+            />
+            <Button type="submit" className="todo_btn">Add Task</Button>
+          </div>
+        </form>
 
-      <ListGroup>
-        {tasks.map((task) => (
-          <ListGroup.Item key={task.id} className="d-flex justify-content-between align-items-center">
-            {task.text}
-            <span 
-              onClick={() => dispatch({ type: 'DELETE_TASK', payload: task.id })}
-            >
-             <Button style={{background:"red", border:"red"}}>Delete</Button>
-            </span>
-          </ListGroup.Item>
-        ))}
-      </ListGroup>
-    </div>
+        <div>
+          <ul>
+            {task.map((currenttask, index) => {
+              return (
+                <li key={index}>
+                  <span>{currenttask}</span>
+                  <Button
+                    style={{ background: "red", border: "red" }}
+                    className="deletebtn"
+                    onClick={() => handleDeleteTask(index)}
+                  >
+                    Delete
+                  </Button>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      </section>
+    </section>
   );
 };
 
