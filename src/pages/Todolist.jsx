@@ -1,69 +1,86 @@
-import { useState } from "react";
-import { Button } from "react-bootstrap";
+import { useReducer, useState } from "react";
 
-const Todolist = () => {
-  const [input, setinputvalue] = useState('');
-  const [task, settask] = useState([]);
+function todoReducer(state, action) {
+  switch (action.type) {
 
-  const handleinputchange = (value) => {
-    setinputvalue(value);
-  };
+    case "REMOVE_ITEM":
+      return state.filter((item) => item.id !== action.payload);
 
-  const handleFormSubmit = (event) => {
-    event.preventDefault();
+    case "ADD_ITEM":
+      return [...state, { id: Date.now(), text: action.payload, completed: false }];
 
-    if (!input.trim()) return;
-    if (task.includes(input)) {
-      setinputvalue(""); // Clear input even if it's a duplicate
-      return;
-    }
+    case "COMPLETED_ITEM":
+      return state.map((item) =>
+        item.id === action.payload ? { ...item, completed: !item.completed } : item);
 
-    settask((prevTasks) => [...prevTasks, input]);
-    setinputvalue("");
-  };
+    default:
+      return state;
+  }
+}
 
-  const handleDeleteTask = (indexToDelete) => {
-    const updatedTasks = task.filter((_, index) => index !== indexToDelete);
-    settask(updatedTasks);
+const TodoList = () => {
+  const [todos, dispatch] = useReducer(todoReducer, []);
+  const [input, setInput] = useState("");
+
+  const handleAdd = () => {
+    (input.trim() === "") ? true : dispatch({ type: "ADD_ITEM", payload: input }); setInput("");
   };
 
   return (
-    <section className="todo_container">
-      <header>To-Do-List</header>
-      <section className="form">
-        <form onSubmit={handleFormSubmit}>
-          <div>
-            <input
-              type="text"
-              className="input"
-              value={input}
-              onChange={(event) => handleinputchange(event.target.value)}
-            />
-            <Button type="submit" className="todo_btn">Add Task</Button>
-          </div>
-        </form>
+    <div className="card" style={{ width: "30rem" }}>
+      <div className="card-body">
+        <h5 className="card-title">ToDo List</h5>
 
-        <div>
-          <ul>
-            {task.map((currenttask, index) => {
-              return (
-                <li key={index}>
-                  <span>{currenttask}</span>
-                  <Button
-                    style={{ background: "red", border: "red" }}
-                    className="deletebtn"
-                    onClick={() => handleDeleteTask(index)}
-                  >
-                    Delete
-                  </Button>
-                </li>
-              );
-            })}
-          </ul>
+
+        <div className="input-group mb-3">
+          <input
+            type="text"
+            className="form-control"
+            placeholder="Enter List Item Names"
+            value={input}
+            onChange={(e) => setInput(e.target.value)}
+          />
+          <button
+            className="btn btn-outline-secondary"
+            type="button"
+            onClick={handleAdd}
+          >
+            Add Todo Items
+          </button>
         </div>
-      </section>
-    </section>
+
+
+        <ul className="list-group list-group-flush">
+          {todos.map((item) => (
+            <li
+              key={item.id}
+              className="list-group-item"
+              onClick={() =>
+                dispatch({ type: "COMPLETED_ITEM", payload: item.id })
+              }
+              style={{
+                textDecoration: item.completed ? "line-through" : "none",
+                cursor: "pointer",
+              }}
+            >
+              {" "}
+              {item.text}
+              <button style={{ marginLeft: '290px' }}
+                className="btn btn-outline-secondary btn-remove"
+                type="button"
+                onClick={(e) => {
+               
+                  dispatch({ type: "REMOVE_ITEM", payload: item.id });
+                }}
+              >
+                Remove
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
   );
 };
 
-export default Todolist;
+export default TodoList;
