@@ -58,21 +58,16 @@ const TodoList = () => {
               onClick={() =>
                 dispatch({ type: "COMPLETED_ITEM", payload: item.id })
               }
-              style={{
-                textDecoration: item.completed ? "line-through" : "none",
-                cursor: "pointer",
-              }}
-            >
-              {" "}
+              style={{ textDecoration: item.completed ? "line-through" : "none", cursor: "pointer", }}>
+
               {item.text}
               <button style={{ marginLeft: '290px' }}
                 className="btn btn-outline-secondary btn-remove"
                 type="button"
                 onClick={(e) => {
-               
+
                   dispatch({ type: "REMOVE_ITEM", payload: item.id });
-                }}
-              >
+                }}>
                 Remove
               </button>
             </li>
