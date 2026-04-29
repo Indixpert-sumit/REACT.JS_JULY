@@ -8,6 +8,7 @@ function todoReducer(state, action) {
 
     case "ADD_ITEM":
       return [...state, { id: Date.now(), text: action.payload, completed: false }];
+      
 
     case "COMPLETED_ITEM":
       return state.map((item) =>
