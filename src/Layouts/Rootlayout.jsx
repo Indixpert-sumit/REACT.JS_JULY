@@ -1,18 +1,23 @@
 import { Outlet, NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button } from "react-bootstrap";
+import { Accordion, Button, Col } from "react-bootstrap";
 
 const RootLayout = () => {
   return (
+    
     <div className="container-fluid bg-light min-vh-100 p-4">
+      
       <div className="row g-4">
+        
 
-        <nav className="col-md-3 col-lg-2 d-md-block bg-white border-end shadow-sm p-4">
-
+        <nav className="col-md-3">
           <div>
             <Button >Bootstrap  Components</Button>
           </div>
-
+ <Accordion defaultActiveKey="0">
+      <Accordion.Item eventKey="0">
+        <Accordion.Header>Non-Intractive components</Accordion.Header>
+        <Accordion.Body>
           <ul className="nav flex-column gap-2">
             <li className="nav-item">
               <NavLink to="/counter1"
@@ -32,27 +37,61 @@ const RootLayout = () => {
                 Static Profile
               </NavLink>
             </li>
+            
             <li className="nav-item">
-              <NavLink to="/dynamic">
-                Dynamic Profile
-              </NavLink>
-            </li>
-             <li className="nav-item">
               <NavLink to="/todolist">
                 Todo-list
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to="/table">
+               RB_Badge
+              </NavLink>
+            </li>
+               <li className="nav-item">
+              <NavLink to="/breadcrumb">
+               RB_Breadcumb
+              </NavLink>
+            </li>
+                <li className="nav-item">
+              <NavLink to="/buttons">
+               RB_Buttons
+              </NavLink>
+            </li>
+           
+            <li className="nav-item">
+              <NavLink to="/button_group">
+               RB_Buttons_Group
+              </NavLink>
+            </li>
+             <li className="nav-item">
+              <NavLink to="/Basic_card">
+               Basic_card
+              </NavLink>
+            </li>
           </ul>
+        </Accordion.Body>
+      </Accordion.Item>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header>Intractive components</Accordion.Header>
+        <Accordion.Body>
+          
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+          
+
+          
         </nav>
-
-        <main className="col">
-          <div className="card shadow-sm border-0 min-vh-100">
-            <div className="card-body p-5">
-              <Outlet />
+        <Col>
+          <main >
+            <div className="card shadow-sm border-0 min-vh-100">
+              <div className="card-body">
+                <Outlet />
+              </div>
             </div>
-          </div>
-        </main>
-
+          </main>
+        </Col>
       </div>
     </div>
   );

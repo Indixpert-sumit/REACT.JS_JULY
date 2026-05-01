@@ -9,7 +9,12 @@ import DynamicProfileCard from "./pages/Dynamicprofile";
 import batmanImg from "./assests/batman.svg";
 import cloudImg from "./assests/cloud.svg";
 import lazy from "./assests/lazy.svg";
-import TodoApp from "./pages/Todolist";
+import Todolist from "./pages/Todolist";
+import EmployeeTable from "./pages/Rbbadge";
+import RbBreadCrumb from "./pages/RB_Breadcrumb";
+import RB_Buttons from "./pages/RB_Buttons";
+import Button_Group from "./pages/RB_Buttongroup";
+import Basic_card from "./pages/Cards";
 
 const App = () => {
   return (
@@ -21,35 +26,15 @@ const App = () => {
           <Route path="counter1" element={<Counterwithusestate />} />
           <Route path="counter2" element={<ReducerCounter_ />} />
           <Route path="profile" element={<Staticprofile_ />} />
-          <Route path="todolist" element={<TodoApp />} />
+          <Route path="todolist" element={<Todolist />} />
+          <Route path="table" element={<EmployeeTable />} />
+          <Route path="breadcrumb" element={<RbBreadCrumb/>} />
+          <Route path="buttons" element={<RB_Buttons/>} />
+          <Route path="button_group" element={<Button_Group/>} />
+          <Route path="Basic_card" element={<Basic_card/>} />
 
-          <Route path="dynamic" element={<div className="container mt-4">
-            <h2 className="mb-4">Student Profiles Cards</h2>
-            <h4>Dyynamic React Component Assignment</h4>
-            <div className="d-flex gap-3 flex-wrap">
-              <DynamicProfileCard
-                name="John Deo"
-                role="Frontend Devloper"
-                desc="I enjoy building clean and responsive user interfaces using react!"
-                img={cloudImg} />
-
-              <DynamicProfileCard
-                name="Jennifer Martin"
-                role="Backend Development Student"
-                desc="I  enjoy building fast api using python and fastapi"
-                img={batmanImg} />
-
-              <DynamicProfileCard
-                name="Thomas smith"
-                role="Full stack Development student"
-                desc="I enjoy building clean and responsive user interfaces and api using react"
-                img={lazy} />
-            </div>
-            <footer className="text-bold">created for react practice</footer>
-
-          </div>
-          }
-          />
+         
+        
         </Route>
       </Routes>
     </BrowserRouter>
