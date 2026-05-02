@@ -69,6 +69,11 @@ const RootLayout = () => {
                Basic_card
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to="/RB_Images">
+              RB_Images
+              </NavLink>
+            </li>
           </ul>
         </Accordion.Body>
       </Accordion.Item>

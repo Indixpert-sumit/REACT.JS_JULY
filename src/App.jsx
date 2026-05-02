@@ -15,6 +15,7 @@ import RbBreadCrumb from "./pages/RB_Breadcrumb";
 import RB_Buttons from "./pages/RB_Buttons";
 import Button_Group from "./pages/RB_Buttongroup";
 import Basic_card from "./pages/Cards";
+import RB_images from "./pages/RB_Images";
 
 const App = () => {
   return (
@@ -32,6 +33,7 @@ const App = () => {
           <Route path="buttons" element={<RB_Buttons/>} />
           <Route path="button_group" element={<Button_Group/>} />
           <Route path="Basic_card" element={<Basic_card/>} />
+          <Route path="RB_images" element={<RB_images />} />
 
          
         
