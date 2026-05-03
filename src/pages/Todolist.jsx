@@ -87,12 +87,10 @@ const TodoList = () => {
         </ul>
       </div>
 
-      <style>{`
-        .custom-checkbox .form-check-input:checked {
+      <style>{`.custom-checkbox .form-check-input:checked {
           background-color: #198754; /* Success Green */
           border-color: #198754;
-        }
-        .custom-checkbox .form-check-input {
+        }.custom-checkbox .form-check-input {
           border-radius: 50%; /* Makes it a circle */
           width: 1.2em;
           height: 1.2em;

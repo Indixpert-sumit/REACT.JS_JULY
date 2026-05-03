@@ -16,6 +16,8 @@ import RB_Buttons from "./pages/RB_Buttons";
 import Button_Group from "./pages/RB_Buttongroup";
 import Basic_card from "./pages/Cards";
 import RB_images from "./pages/RB_Images";
+import RB_Listgroup from "./pages/RB_Listgroup";
+import RB_Figure from "./pages/RB_Figure";
 
 const App = () => {
   return (
@@ -34,6 +36,8 @@ const App = () => {
           <Route path="button_group" element={<Button_Group/>} />
           <Route path="Basic_card" element={<Basic_card/>} />
           <Route path="RB_images" element={<RB_images />} />
+          <Route path="RB_Listgroup" element={<RB_Listgroup />} />
+          <Route path="RB_Figure" element={<RB_Figure />} />
 
          
         

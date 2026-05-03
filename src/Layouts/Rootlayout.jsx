@@ -74,6 +74,16 @@ const RootLayout = () => {
               RB_Images
               </NavLink>
             </li>
+             <li className="nav-item">
+              <NavLink to="/RB_Listgroup">
+              RB_Listgroup
+              </NavLink>
+            </li>
+            <li className="nav-item">
+              <NavLink to="/RB_Figure">
+              RB_Figure
+              </NavLink>
+            </li>
           </ul>
         </Accordion.Body>
       </Accordion.Item>
