@@ -84,6 +84,16 @@ const RootLayout = () => {
               RB_Figure
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to="/RB_pagination">
+              RB_pagination
+              </NavLink>
+            </li>
+             <li className="nav-item">
+              <NavLink to="/RB_progressbar">
+              RB_progressbar
+              </NavLink>
+            </li>
           </ul>
         </Accordion.Body>
       </Accordion.Item>
