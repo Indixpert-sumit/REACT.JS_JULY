@@ -16,13 +16,13 @@ function Progress() {
   return (
     <div>
       <ProgressBar variant="success" now={value}label={`${value}%`} /> <br />
-      <ProgressBar variant="info" now={value}  label={`${value}%`}/> <br />
+      <ProgressBar variant="danger" now={value}  label={`${value}%`}/> <br />
     
       <br /><br />
       <button onClick={handleIncrease} style={{backgroundColor:'green', marginLeft:'180px'}}>+5</button>
       <button onClick={decrease} style={{backgroundColor:'red', marginLeft:'260px'}} >-5</button>
       <Card style={{ width: '18rem' }}>
-      <Card.Img variant="top" src="https://www.academy.indixpert.com/images/logo/indixpert-logo.svg" />
+      <Card.Img variant="top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFUWMWTbPG96vA1e5UAud17w5xcUUHxj11GA&s" />
       <Card.Body>
         <Card.Title> <h4>Bootstrap Dashboard application</h4> </Card.Title>
         <Card.Text>

@@ -94,6 +94,11 @@ const RootLayout = () => {
               RB_progressbar
               </NavLink>
             </li>
+            <li className="nav-item">
+              <NavLink to="/RB_Spinner">
+              RB_Spinner
+              </NavLink>
+            </li>
           </ul>
         </Accordion.Body>
       </Accordion.Item>

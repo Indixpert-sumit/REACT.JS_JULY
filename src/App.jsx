@@ -20,6 +20,7 @@ import RB_Listgroup from "./pages/RB_Listgroup";
 import RB_Figure from "./pages/RB_Figure";
 import RB_Pagination from "./pages/RB_Pagination";
 import Progress from "./pages/RB_Progressbar";
+import RB_Spinners from "./pages/RB_Spinner";
 
 const App = () => {
   return (
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="RB_Figure" element={<RB_Figure />} />
           <Route path="RB_Pagination" element={<RB_Pagination />} />
           <Route path="RB_Progressbar" element={<Progress />} />
+          <Route path="RB_Spinner" element={<RB_Spinners />} />
 
          
         
