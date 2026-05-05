@@ -61,12 +61,7 @@ const TodoList = () => {
                 onClick={() => dispatch({ type: "COMPLETED_ITEM", payload: item.id })}
               >
 
-                <Form.Check
-                  type="checkbox"
-                  checked={item.completed}
-                  readOnly
-                  className="me-3 custom-checkbox"
-                />
+                <Form.Check type="checkbox" checked={item.completed} readOnly className="me-3 custom-checkbox" />
                 <span style={{
                   textDecoration: item.completed ? "line-through" : "none",
                   color: item.completed ? "#6c757d" : "black"
@@ -75,11 +70,7 @@ const TodoList = () => {
                 </span>
               </div>
 
-              <Button
-                variant="danger"
-                size="sm"
-                onClick={() => dispatch({ type: "REMOVE_ITEM", payload: item.id })}
-              >
+              <Button variant="danger" size="sm" onClick={() => dispatch({ type: "REMOVE_ITEM", payload: item.id })}>
                 Remove
               </Button>
             </li>

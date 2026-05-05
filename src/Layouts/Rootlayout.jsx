@@ -15,7 +15,7 @@ const RootLayout = () => {
             <Button >Bootstrap  Components</Button>
           </div>
  <Accordion defaultActiveKey="0">
-      <Accordion.Item eventKey="0">
+      <Accordion.Item>
         <Accordion.Header>Non-Intractive components</Accordion.Header>
         <Accordion.Body>
           <ul className="nav flex-column gap-2">

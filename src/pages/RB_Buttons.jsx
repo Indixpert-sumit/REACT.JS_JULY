@@ -16,7 +16,6 @@ const RB_Buttons = () => {
 
     return (
         <div className="p-4">
-            {/* Button Styles Section */}
             <h2 className='d-flex'>BUTTON STYLES</h2>
             <div className='d-flex gap-2' >
                 <Button variant="primary">Normal Button</Button>
