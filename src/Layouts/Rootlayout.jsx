@@ -1,117 +1,151 @@
 import { Outlet, NavLink } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Accordion, Button, Col } from "react-bootstrap";
+import { ArrowBarRight } from "react-bootstrap-icons";
+import { BsArrowBarRight } from "react-icons/bs";
+import { FaArrowRight } from "react-icons/fa";
 
 const RootLayout = () => {
   return (
-    
-    <div className="container-fluid bg-light min-vh-100 p-4">
-      
+
+    <div className="container-fluid  min-vh-100 p-4">
+
       <div className="row g-4">
-        
+
 
         <nav className="col-md-3">
-          <div>
-            <Button >Bootstrap  Components</Button>
+          <div className="d-flex justify-content-center">
+            <Button>Bootstrap  Components</Button>
           </div>
- <Accordion defaultActiveKey="0">
-      <Accordion.Item>
-        <Accordion.Header>Non-Intractive components</Accordion.Header>
-        <Accordion.Body>
-          <ul className="nav flex-column gap-2">
-            <li className="nav-item">
-              <NavLink to="/counter1"
-              >
-                Counter useState
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/counter2"
-              >
-                Counter Reducer
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/profile"
-              >
-                Static Profile
-              </NavLink>
-            </li>
-            
-            <li className="nav-item">
-              <NavLink to="/todolist">
-                Todo-list
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/table">
-               RB_Badge
-              </NavLink>
-            </li>
-               <li className="nav-item">
-              <NavLink to="/breadcrumb">
-               RB_Breadcumb
-              </NavLink>
-            </li>
-                <li className="nav-item">
-              <NavLink to="/buttons">
-               RB_Buttons
-              </NavLink>
-            </li>
-           
-            <li className="nav-item">
-              <NavLink to="/button_group">
-               RB_Buttons_Group
-              </NavLink>
-            </li>
-             <li className="nav-item">
-              <NavLink to="/Basic_card">
-               Basic_card
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/RB_Images">
-              RB_Images
-              </NavLink>
-            </li>
-             <li className="nav-item">
-              <NavLink to="/RB_Listgroup">
-              RB_Listgroup
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/RB_Figure">
-              RB_Figure
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/RB_pagination">
-              RB_pagination
-              </NavLink>
-            </li>
-             <li className="nav-item">
-              <NavLink to="/RB_progressbar">
-              RB_progressbar
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink to="/RB_Spinner">
-              RB_Spinner
-              </NavLink>
-            </li>
-          </ul>
-        </Accordion.Body>
-      </Accordion.Item>
-      <Accordion.Item eventKey="1">
-        <Accordion.Header>Intractive components</Accordion.Header>
-        <Accordion.Body>
-          
-        </Accordion.Body>
-      </Accordion.Item>
-    </Accordion>
-          
+          <Accordion defaultActiveKey="0">
+            <Accordion.Item >
+              <Accordion.Header>Non-Intractive components</Accordion.Header>
+              <Accordion.Body className="d-flex">
+                <ul className="nav flex-column gap-2">
+                  <li className="nav-item">
+                    <NavLink to="/counter1"
+                    >
+                      <FaArrowRight />
+                      Counter useState
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/counter2"
+                    >
+                      <FaArrowRight />
+                      Counter Reducer
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/profile"
+                    >
+                      <FaArrowRight />
+                      Static Profile
+                    </NavLink>
+                  </li>
 
-          
+                  <li className="nav-item">
+                    <NavLink to="/todolist">
+                      <FaArrowRight />
+                      Todo-list
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/table">
+                      <FaArrowRight />
+                      RB_Badge
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/breadcrumb">
+                      <FaArrowRight />
+                      RB_Breadcumb
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/buttons">
+                      <FaArrowRight />
+                      RB_Buttons
+                    </NavLink>
+                  </li>
+
+                  <li className="nav-item">
+                    <NavLink to="/button_group">
+                      <FaArrowRight />
+                      RB_Buttons_Group
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/Basic_card">
+                      <FaArrowRight />
+                      Basic_card
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/RB_Images">
+                      <FaArrowRight />
+                      RB_Images
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/RB_Listgroup">
+                      <FaArrowRight />
+                      RB_Listgroup
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/RB_Figure">
+                      <FaArrowRight />
+                      RB_Figure
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/RB_pagination">
+                      <FaArrowRight />
+                      RB_pagination
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/RB_progressbar">
+                      <FaArrowRight />
+                      RB_progressbar
+                    </NavLink>
+                  </li>
+                  <li className="nav-item">
+                    <NavLink to="/RB_Spinner">
+
+                      <FaArrowRight />
+                      RB_Spinner
+                    </NavLink>
+                  </li>
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>Intractive components</Accordion.Header>
+              <Accordion.Body>
+                <ul className="nav flex-column gap-2">
+                  <li className="nav-item">
+                    <NavLink to="/RB_Accordion">
+                    <FaArrowRight />
+                      RB_Accordion
+                    </NavLink>
+
+                  </li>
+                  {/* <li className="nav-item">
+                    <NavLink to="/RB_Dropdown">
+                    <FaArrowRight />
+                      RB_Dropdown
+                    </NavLink>
+
+                  </li> */}
+                </ul>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+
+
+
         </nav>
         <Col>
           <main >
