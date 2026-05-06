@@ -17,8 +17,7 @@ function RB_Accordion() {
         <div className="p-3">
             <style>{`.no-arrow .accordion-button::after { display: none !important; }`}</style>
 
-            <Accordion
-                activeKey={activeKey}
+            <Accordion activeKey={activeKey}
                 onSelect={(k) => setActiveKey(k)}
                 className="no-arrow"
             >
