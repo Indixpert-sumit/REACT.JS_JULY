@@ -7,13 +7,6 @@ const RB_Buttons = () => {
     const [italic, setItalic] = useState(false);
     const [underline, setUnderline] = useState(false);
 
-    const textStyle = {
-        fontWeight: bold ? "bold" : "normal",
-        fontStyle: italic ? "italic" : "normal",
-        textDecoration: underline ? "underline" : "none",
-        marginTop: "10px",
-    };
-
     return (
         <div className="p-4">
             <h2 className='d-flex'>BUTTON STYLES</h2>
@@ -29,8 +22,7 @@ const RB_Buttons = () => {
             {/* Button Types Section */}
             <h2 className='d-flex' style={{ marginTop: "70px" }}>BUTTON TYPES</h2>
             <div className='d-flex gap-2' >
-                <Button variant="primary">Link</Button>
-                <Button variant="primary">Button</Button>
+                <Button href="#">Link</Button> <Button type="submit">Button</Button>
                 <Button variant="primary" type="button">Input</Button>
                 <Button variant="primary" type="submit">Submit</Button>
                 <Button variant="primary" type="reset">Reset</Button>
@@ -39,28 +31,29 @@ const RB_Buttons = () => {
             {/* Toggle Buttons Section */}
             <h3 className="mt-4 d-flex">Toggle Buttons</h3>
             <div className="mt-4 d-flex">
-                <Button 
-                    variant={bold ? "primary" : "outline-primary"}
-                    onClick={() => setBold(!bold)}>
+                <Button onClick={() => setBold(!bold)} >
                     <b>B</b>
                 </Button>
 
-                <Button
-                    variant={italic ? "primary" : "outline-primary"}
-                    onClick={() => setItalic(!italic)}>
+                <Button onClick={() => setItalic(!italic)}>
                     <i>I</i>
                 </Button>
 
                 <Button
-                    variant={underline ? "primary" : "outline-primary"}
-                    onClick={() => setUnderline(!underline)}>
+                    onClick={() => setUnderline(!underline)} >
                     <u>U</u>
                 </Button>
-                </div>
-
-            <div style={textStyle} className="mt-4 d-flex">
-                Sample Text Preview
             </div>
+            <p
+                className=" d-flex mt-3"
+                style={{
+                    fontWeight: bold ? "bold" : "normal",
+                    fontStyle: italic ? "italic" : "normal",
+                    textDecoration: underline ? "underline" : "none"
+                }}
+            >
+                This text changes style
+            </p>
         </div>
     );
 };
