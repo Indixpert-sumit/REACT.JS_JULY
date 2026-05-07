@@ -1,36 +1,33 @@
-import { useState } from 'react';
-import Button from 'react-bootstrap/Button';
-import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { useState } from "react";
+import { Button, ButtonGroup } from "react-bootstrap";
 
 const Button_Group = () => {
+
   const [align, setAlign] = useState("center");
 
-  const buttonOptions = [
-    { label: "Left", value: "left" },
-    { label: "Center", value: "center" },
-    { label: "Right", value: "right" }
-  ];
-
   return (
-    <>
-      <ButtonGroup aria-label="Alignment Buttons">
-        {buttonOptions.map((btn, index) => (
-          <Button
-            key={index}
-            variant="primary d-flex align-items-center"
-            onClick={() => setAlign(btn.value)}
-          >
-            {btn.label}
-          </Button>
-        ))}
+    <div>
+
+      <ButtonGroup>
+        <Button onClick={() => setAlign("left")}>
+          Left
+        </Button>
+
+        <Button onClick={() => setAlign("center")}>
+          Center
+        </Button>
+
+        <Button onClick={() => setAlign("right")}>
+          Right
+        </Button>
       </ButtonGroup>
 
-      <div className="w-100">
-        <p className="mt-2" style={{ textAlign: align }}>
-          Sample Text
-        </p>
-      </div>
-    </>
+      <p className="mt-3"
+        style={{ textAlign: align }}>
+        Sample Text
+      </p>
+
+    </div>
   );
 };
 
