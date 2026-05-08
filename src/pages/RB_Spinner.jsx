@@ -11,19 +11,14 @@ function RB_Spinners() {
     return (
         <div>
             <div style={{ marginTop: "10px" }}>
-                <Button
-                    variant="success"
-                    onClick={handleStart}
-                    disabled={loading}
-                    style={{ marginRight: "10px", minWidth: "110px" }}
-                >
-                    {loading ? ( 
+                <Button variant="success" onClick={handleStart} disabled={loading}
+                    style={{ marginRight: "10px", minWidth: "110px" }}>
+                    {loading ? (
                         <>
-                            <Spinner
-                                as="span"
+                            <Spinner as="span"
                                 animation="border"
-                              size="sm"
-                                role="status"
+                                size="sm"
+
                                 aria-hidden="true" />{" "}
                             Loading...
                         </>

@@ -42,25 +42,21 @@ function RB_Pagination() {
             <Pagination>
                 <Pagination.First
                     onClick={() => setActivePage(1)}
-                    disabled={activePage === 1}
-                />
+                    disabled={activePage === 1} />
 
                 <Pagination.Prev
                     onClick={() => setActivePage(Math.max(1, activePage - 1))}
-                    disabled={activePage === 1}
-                />
+                    disabled={activePage === 1} />
 
                 {createPageItems()}
 
                 <Pagination.Next
                     onClick={() => setActivePage(Math.min(TOTAL_PAGES, activePage + 1))}
-                    disabled={activePage === TOTAL_PAGES}
-                />
+                    disabled={activePage === TOTAL_PAGES} />
 
                 <Pagination.Last
                     onClick={() => setActivePage(TOTAL_PAGES)}
-                    disabled={activePage === TOTAL_PAGES}
-                />
+                    disabled={activePage === TOTAL_PAGES} />
             </Pagination>
 
 

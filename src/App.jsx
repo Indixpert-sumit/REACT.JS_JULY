@@ -4,11 +4,10 @@ import RootLayout from "./Layouts/Rootlayout";
 import Counterwithusestate from "./pages/Counterwithusestate";
 import ReducerCounter_ from "./pages/Reducercounter";
 import Staticprofile_ from "./pages/Staticprofile";
-import DynamicProfileCard from "./pages/Dynamicprofile";
 
-import batmanImg from "./assests/batman.svg";
-import cloudImg from "./assests/cloud.svg";
-import lazy from "./assests/lazy.svg";
+import batmanImg from "./assets/batman.svg";
+import cloudImg from "./assets/cloud.svg";
+import lazy from "./assets/lazy.svg";
 import Todolist from "./pages/Todolist";
 import EmployeeTable from "./pages/Rbbadge";
 import RbBreadCrumb from "./pages/RB_Breadcrumb";
@@ -21,6 +20,9 @@ import RB_Figure from "./pages/RB_Figure";
 import RB_Pagination from "./pages/RB_Pagination";
 import Progress from "./pages/RB_Progressbar";
 import RB_Spinners from "./pages/RB_Spinner";
+import RB_Accordion from "./Interactive_Components/Accordion";
+import RB_Dropdown from "./Interactive_Components/RB_Dropdown";
+import Dynamic_EmployeeTable from "./pages/Rbbadge";
 
 const App = () => {
   return (
@@ -44,6 +46,9 @@ const App = () => {
           <Route path="RB_Pagination" element={<RB_Pagination />} />
           <Route path="RB_Progressbar" element={<Progress />} />
           <Route path="RB_Spinner" element={<RB_Spinners />} />
+          <Route path="RB_Accordion" element={<RB_Accordion />} />
+          <Route path="RB_Dropdown" element={<RB_Dropdown />} />
+          <Route path="Dynamic_EmployeeTable" element={<Dynamic_EmployeeTable />} />
 
          
         

@@ -1,5 +1,6 @@
 import Table from "react-bootstrap/Table";
 import Badge from "react-bootstrap/Badge";
+import { Container } from "react-bootstrap";
 
 const employees = [
     { name: "Joseph Oden", dept: "Sales", icon: "bi-cart", salary: "$64,000", date: "Aug 3, 2024", status: "PENDING", empType: "Full-Time" },
@@ -24,8 +25,9 @@ function getBadgeVariant(status) {
     }
 }
 
-export default function Dynamic_EmployeeTable() {
+export default function EmployeeTable() {
     return (
+        <Container>
         <div className="p-3">
             <Table responsive hover className="align-middle">
                 <thead>
@@ -63,5 +65,6 @@ export default function Dynamic_EmployeeTable() {
                 </tbody>
             </Table>
         </div>
+        </Container>
     );
 }

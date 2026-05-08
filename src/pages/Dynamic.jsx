@@ -1,6 +1,6 @@
-import './../assests/batman.svg'
-import './../assests/lazy.svg'
-import './../assests/cloud.svg'
+import './../assets/batman.svg'
+import './../assets/lazy.svg'
+import './../assets/cloud.svg'
 
 export const DynamicAvatar = ({ img }) => {
     return (

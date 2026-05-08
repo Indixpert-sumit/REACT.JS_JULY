@@ -118,6 +118,13 @@ const RootLayout = () => {
                       RB_Spinner
                     </NavLink>
                   </li>
+                   <li className="nav-item">
+                    <NavLink to="/Dynamic_EmployeeTable">
+
+                      <FaArrowRight />
+                      Dynamic_Table
+                    </NavLink>
+                  </li>
                 </ul>
               </Accordion.Body>
             </Accordion.Item>
@@ -132,13 +139,21 @@ const RootLayout = () => {
                     </NavLink>
 
                   </li>
-                  {/* <li className="nav-item">
+                  <li className="nav-item">
                     <NavLink to="/RB_Dropdown">
                     <FaArrowRight />
                       RB_Dropdown
                     </NavLink>
 
-                  </li> */}
+                  </li>
+
+                   <li className="nav-item">
+                    <NavLink to="/RB_Dropdown">
+                    <FaArrowRight />
+                      RB_Carousel
+                    </NavLink>
+
+                  </li>
                 </ul>
               </Accordion.Body>
             </Accordion.Item>

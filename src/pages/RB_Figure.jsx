@@ -1,6 +1,6 @@
 import React from 'react';
 import { Figure } from 'react-bootstrap'; 
-import MyScreenshot from './../assests/Figure.png'; 
+import MyScreenshot from './../assets/Figure.png'; 
 
 const RB_Figure = () => {
   return (
